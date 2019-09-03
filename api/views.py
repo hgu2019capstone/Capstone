@@ -90,5 +90,5 @@ def createhw(request):
             
 
 def hwlist(request):
-        hws = Homeworks.objects.all()
-        return render(request, "hwlist.html", {'hws':hws})
+        my_hws = Homework_student.objects.get(student="jhj1116")
+        return render(request, "myhw.html", {'hws':my_hws})
